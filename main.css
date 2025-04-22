@@ -10,6 +10,14 @@
   .justify-content-center {
     justify-content: center;
   }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: row;
+  }
   
   .full-width {
     width: 100%;
@@ -29,10 +37,43 @@
   body {
     background-color: #d8a7d8;
     color: black;
-  
     font-family: "Rubik", serif;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
     padding: 0;
+  }
+
+  .red {
+    border: 2px red solid;
+  }
+
+  .calculator {
+    height: 500px;
+    width: 500px;
+    background-color: black;
+    color: white;
+    box-shadow: ;
+    border-radius: 5px;
+  }
+
+  .number-buttons, .operation-buttons, .display-buttons {
+    border-radius: 50%;
+  }
+
+  .number-buttons {
+    background-color: rgb(45, 44, 44);
+  }
+
+  .operation-buttons {
+    background-color: rgb(112, 112, 112);
+  }
+
+  .display-buttons {
+    background-color: lightgray;
+  }
+
+  .equals-button {
+    border-radius: 3px;
+    background-color: #d8a7d8;
   }
