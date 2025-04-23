@@ -44,21 +44,75 @@
     padding: 0;
   }
 
-  .red {
-    border: 2px red solid;
+  .calculator {
+    height: 400px;
+    min-width: 400px;
+    background-color: black;
+    border-radius: 24px;
+    padding: 15px;
+    box-shadow: -7px 10px 29px rgba(98, 94, 94, 0.412);
   }
 
-  .calculator {
-    height: 500px;
-    width: 500px;
-    background-color: black;
+  .screen {
+    height: 25%;
+    justify-content: end;
+  }
+
+  .screen p {
+    width: 100%;
+    margin: 0;
+    text-align: end;
+  }
+
+  .equation-input, .screen-input {
+    overflow-x: scroll;
+    overflow-y: overlay;
+    scrollbar-width: 1px;
+
+  }
+
+  .equation-input {
+    color: lightgray;
+    font-size: 20px;
+    padding-bottom: 0;
+    padding-bottom: 1.5%;
+  }
+
+  .screen-input {
     color: white;
-    box-shadow: ;
-    border-radius: 5px;
+    font-size: 30px;
+    padding-bottom: 3%;
+  }
+
+  .button-container {
+    height: 75%;
+    gap: 3%;
+  }
+
+  .button-row {
+    width: 20%;
+    height: 100%;
+    gap: 3%;
+  }
+
+  button {
+    font-size: 25px;
+    color: white;
+    border: 0;
+    font-weight: 600;
+  }
+
+  button:hover {
+    opacity: 0.75;
+  }
+
+  button:active {
+    opacity: 0.65;
   }
 
   .number-buttons, .operation-buttons, .display-buttons {
     border-radius: 50%;
+    height: 25%;
   }
 
   .number-buttons {
@@ -71,9 +125,11 @@
 
   .display-buttons {
     background-color: lightgray;
+    color: rgb(45, 44, 44);
   }
 
   .equals-button {
-    border-radius: 3px;
+    border-radius: 9px;
     background-color: #d8a7d8;
+    height: 50%;
   }

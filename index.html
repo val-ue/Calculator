@@ -12,55 +12,69 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/805760b91e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/805760b91e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body class="full-width full-height">
-    <main class="flex justify-content-center full-height">
+    <main class="flex justify-content-center align-items-center full-height">
       <div class="calculator">
-        <div class="screen">
-          5454545454
+        <div class="screen flex column">
+          <p class="equation-input" id="equation-input">8484848484</p>
+          <p class="screen-input" id="screen-input">5454545454</p>
         </div>
 
         <div class="button-container flex row">
-          <div class="first-row flex column">
-            <button class="number-buttons">7</button>
-            <button class="number-buttons">4</button>
-            <button class="number-buttons">1</button>
-            <button class="number-buttons">0</button>
+          <div class="button-row flex column">
+            <button class="number-buttons entry" id="seven">7</button>
+            <button class="number-buttons entry" id="four">4</button>
+            <button class="number-buttons entry" id="one">1</button>
+            <button class="number-buttons entry" id="zero">0</button>
           </div>
 
-          <div class="second-number-row flex column">
-            <button class="number-buttons">8</button>
-            <button class="number-buttons">5</button>
-            <button class="number-buttons">2</button>
-            <button class="number-buttons">.</button>
+          <div class="button-row flex column">
+            <button class="number-buttons entry" id="eight">8</button>
+            <button class="number-buttons entry" id="five">5</button>
+            <button class="number-buttons entry" id="two">2</button>
+            <button class="number-buttons entry" id="point">.</button>
           </div>
 
-          <div class="third-number-row flex column">
-            <button class="number-buttons">9</button>
-            <button class="number-buttons">6</button>
-            <button class="number-buttons">3</button>
-            <button class="number-buttons">AC</button>
+          <div class="button-row flex column">
+            <button class="number-buttons entry" id="nine">9</button>
+            <button class="number-buttons entry" id="six">6</button>
+            <button class="number-buttons entry" id="three">3</button>
+            <button class="number-buttons clear" id="ac">AC</button>
           </div>
 
-          <div class="operation-row flex column">
-            <button class="operation-buttons"><i class="fa-solid fa-divide"></i></button>
-            <button class="operation-buttons"><i class="fa-solid fa-xmark"></i></button>
-            <button class="operation-buttons"><i class="fa-solid fa-minus"></i></button>
-            <button class="operation-buttons"><i class="fa-solid fa-plus"></i></button>
+          <div class="button-row flex column">
+            <button class="operation-buttons" id="divide">
+              <i class="fa-solid fa-divide"></i>
+            </button>
+            <button class="operation-buttons" id="multiply">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="operation-buttons" id="subtract">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button class="operation-buttons" id="add">
+              <i class="fa-solid fa-plus"></i>
+            </button>
           </div>
 
-          <div class="result-row flex column">
+          <div class="button-row flex column">
             <button class="display-buttons" id="text-button">T</button>
-            <button class="display-buttons" id="roman-numeral-button">IV</button>
-            <button class="equals-button" id="equals-button"><i class="fa-solid fa-equals"></i></button>
+            <button class="display-buttons" id="roman-numeral-button">
+              IV
+            </button>
+            <button class="equals-button" id="equals-button">
+              <i class="fa-solid fa-equals"></i>
+            </button>
           </div>
-
         </div>
       </div>
     </main>
-
     <script src="main.js"></script>
   </body>
 </html>
