@@ -1,5 +1,5 @@
 const get = (selector) => {
-    return document.getElementById(selector);
+  return document.getElementById(selector);
 };
 
 const one = get("one");
@@ -22,22 +22,66 @@ const equalsButton = get("equals-button");
 const screenInput = get("screen-input");
 const equationInput = get("equation-input");
 
-//when u press one of the numbers, it takes the
-//  button innertext and puts it onto the screen 
-// (both places)
 
 const entryNumbers = document.querySelectorAll(".entry");
-//so now we have a nodelist of all the numbers
-//a nodelist is a type of array so we can loop through them
+const operationButton = document.querySelectorAll(".operation-buttons");
+
+
 
 console.log(entryNumbers);
 
 equationInput.innerText = "84848484";
 screenInput.innerText = "5454554";
 
-entryNumbers.forEach(entry => {
-    entry.addEventListener("click", () => {
-        equationInput.innerText += entry.innerText;
-        screenInput.innerText += entry.innerText;
-    })
+const textOnScreen = (type) => {
+    equationInput.innerText += type.innerText; 
+    screenInput.innerText += type.innerText;
+};
+
+
+let isOperationOn = false;
+
+
+entryNumbers.forEach((entry) => {
+  entry.addEventListener("click", () => {
+    if(isOperationOn === true) {
+
+        screenInput.innerText = "";
+        textOnScreen(entry);
+        isOperationOn = false;
+
+    } else {
+        textOnScreen(entry);
+    }
+  });
 });
+
+operationButton.forEach((entry) => {
+    entry.addEventListener("click", () => {
+        isOperationOn = true;
+    });
+  });
+
+point.addEventListener("click", () => {
+  if (
+    equationInput.innerText.includes(".") ||
+    screenInput.innerText.includes(".")
+  ) {
+    return;
+  } else {
+    textOnScreen(point);
+  }
+});
+
+ac.addEventListener("click", () => {
+  equationInput.innerText = "";
+  screenInput.innerText = "0";
+});
+
+multiply.addEventListener("click", () => {
+  equationInput.innerText += "x";
+
+  //if
+});
+
+//÷

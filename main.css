@@ -46,16 +46,21 @@
 
   .calculator {
     height: 400px;
-    min-width: 400px;
+    width: 400px;
     background-color: black;
     border-radius: 24px;
-    padding: 15px;
+    padding: 22px;
     box-shadow: -7px 10px 29px rgba(98, 94, 94, 0.412);
   }
 
   .screen {
-    height: 25%;
-    justify-content: end;
+    height: 20%;
+    justify-content: center;
+    overflow: scroll;
+    /*overflow: hidden; */
+    scrollbar-color: rgb(112, 112, 112) black;
+    scrollbar-width: thin;
+    overflow-y: hidden;
   }
 
   .screen p {
@@ -64,29 +69,34 @@
     text-align: end;
   }
 
-  .equation-input, .screen-input {
+  /*.equation-input, .screen-input {
     overflow-x: scroll;
     overflow-y: overlay;
     scrollbar-width: 1px;
+    overflow-y: hidden;
 
-  }
+  }*/
 
   .equation-input {
     color: lightgray;
     font-size: 20px;
-    padding-bottom: 0;
     padding-bottom: 1.5%;
+    height: inherit;
   }
 
   .screen-input {
     color: white;
     font-size: 30px;
     padding-bottom: 3%;
+    /*scrollbar-color: rgb(112, 112, 112) black;
+    scrollbar-width: thin;*/
+
   }
 
   .button-container {
     height: 75%;
     gap: 3%;
+    margin-top: 5%;
   }
 
   .button-row {
