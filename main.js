@@ -16,51 +16,44 @@ const point = get("point");
 const ac = get("ac");
 const divide = get("divide");
 const multiply = get("multiply");
+const subtract = get("subtract");
+const add = get("add");
 const textButton = get("text-button");
 const romanNumeralButton = get("roman-numeral-button");
 const equalsButton = get("equals-button");
 const screenInput = get("screen-input");
 const equationInput = get("equation-input");
 
-
 const entryNumbers = document.querySelectorAll(".entry");
 const operationButton = document.querySelectorAll(".operation-buttons");
-
-
-
-console.log(entryNumbers);
 
 equationInput.innerText = "84848484";
 screenInput.innerText = "5454554";
 
 const textOnScreen = (type) => {
-    equationInput.innerText += type.innerText; 
-    screenInput.innerText += type.innerText;
+  equationInput.innerText += type.innerText;
+  screenInput.innerText += type.innerText;
 };
-
 
 let isOperationOn = false;
 
-
 entryNumbers.forEach((entry) => {
   entry.addEventListener("click", () => {
-    if(isOperationOn === true) {
-
-        screenInput.innerText = "";
-        textOnScreen(entry);
-        isOperationOn = false;
-
+    if (isOperationOn === true) {
+      screenInput.innerText = "";
+      textOnScreen(entry);
+      isOperationOn = false;
     } else {
-        textOnScreen(entry);
+      textOnScreen(entry);
     }
   });
 });
 
 operationButton.forEach((entry) => {
-    entry.addEventListener("click", () => {
-        isOperationOn = true;
-    });
+  entry.addEventListener("click", () => {
+    isOperationOn = true;
   });
+});
 
 point.addEventListener("click", () => {
   if (
@@ -78,10 +71,36 @@ ac.addEventListener("click", () => {
   screenInput.innerText = "0";
 });
 
-multiply.addEventListener("click", () => {
-  equationInput.innerText += "x";
+const createOperation = (type, symbol) => {
+  return type.addEventListener("click", () => {
+    equationInput.innerText += symbol;
+  });
+};
 
-  //if
+createOperation(divide, "÷");
+createOperation(multiply, "x");
+createOperation(subtract, "-");
+createOperation(add, "+");
+
+equalsButton.addEventListener("click", () => {
+  const finalEquation = equationInput.innerText;
+  const splitEquation = finalEquation.split("");
+
+  const replacedSymbols = splitEquation.map((character) => {
+    if (character === "÷") {
+        return "/";
+    } else if (character === "x") {
+        return "*";
+    } else {
+        return character;
+    }
+  });
+
+  const newSymbolString = replacedSymbols.join("");
+  const newSymbolNumber = parseInt(newSymbolString);
+
+
+  console.log(newSymbolString);
+  console.log(newSymbolNumber);
+
 });
-
-//÷
