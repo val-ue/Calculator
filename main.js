@@ -27,8 +27,8 @@ const equationInput = get("equation-input");
 const entryNumbers = document.querySelectorAll(".entry");
 const operationButton = document.querySelectorAll(".operation-buttons");
 
-equationInput.innerText = "84848484";
-screenInput.innerText = "5454554";
+equationInput.innerText = "";
+screenInput.innerText = "";
 
 const textOnScreen = (type) => {
   equationInput.innerText += type.innerText;
@@ -36,6 +36,7 @@ const textOnScreen = (type) => {
 };
 
 let isOperationOn = false;
+let isResultCalculated = false;
 
 entryNumbers.forEach((entry) => {
   entry.addEventListener("click", () => {
@@ -52,6 +53,11 @@ entryNumbers.forEach((entry) => {
 operationButton.forEach((entry) => {
   entry.addEventListener("click", () => {
     isOperationOn = true;
+
+    if (isResultCalculated === true) {
+      equationInput.innerText = screenInput.innerText;
+      isResultCalculated = false;
+    }
   });
 });
 
@@ -95,12 +101,14 @@ equalsButton.addEventListener("click", () => {
         return character;
     }
   });
-
+  
   const newSymbolString = replacedSymbols.join("");
-  const newSymbolNumber = parseInt(newSymbolString);
+
+  screenInput.innerText = eval(newSymbolString);
+
+  isResultCalculated = true;
 
 
-  console.log(newSymbolString);
-  console.log(newSymbolNumber);
+
 
 });
