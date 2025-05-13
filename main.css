@@ -1,146 +1,139 @@
 /*****General Styles *****/
 .flex {
-    display: flex;
-  }
-  
-  .align-items-center {
-    align-items: center;
-  }
-  
-  .justify-content-center {
-    justify-content: center;
-  }
+  display: flex;
+}
 
-  .column {
-    flex-direction: column;
-  }
+.align-items-center {
+  align-items: center;
+}
 
-  .row {
-    flex-direction: row;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .full-height {
-    height: 100%;
-  }
-  
-  /***** Styles *****/
-  
-  html {
-    height: 100vh;
-    width: 100%;
-  }
-  
-  body {
-    background-color: #d8a7d8;
-    color: black;
-    font-family: "Rubik", serif;
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-  }
+.justify-content-center {
+  justify-content: center;
+}
 
-  .calculator {
-    height: 400px;
-    width: 400px;
-    background-color: black;
-    border-radius: 24px;
-    padding: 22px;
-    box-shadow: -7px 10px 29px rgba(98, 94, 94, 0.412);
-  }
+.column {
+  flex-direction: column;
+}
 
-  .screen {
-    height: 20%;
-    justify-content: center;
-    overflow: scroll;
-    /*overflow: hidden; */
-    scrollbar-color: rgb(112, 112, 112) black;
-    scrollbar-width: thin;
-    overflow-y: hidden;
-  }
+.row {
+  flex-direction: row;
+}
 
-  .screen p {
-    width: 100%;
-    margin: 0;
-    text-align: end;
-  }
+.full-width {
+  width: 100%;
+}
 
-  /*.equation-input, .screen-input {
-    overflow-x: scroll;
-    overflow-y: overlay;
-    scrollbar-width: 1px;
-    overflow-y: hidden;
+.full-height {
+  height: 100%;
+}
 
-  }*/
+/***** Styles *****/
 
-  .equation-input {
-    color: lightgray;
-    font-size: 20px;
-    padding-bottom: 1.5%;
-    height: inherit;
-    white-space: nowrap;
-  }
+html {
+  height: 100vh;
+  width: 100%;
+}
 
-  .screen-input {
-    color: white;
-    font-size: 30px;
-    padding-bottom: 3%;
-    /*scrollbar-color: rgb(112, 112, 112) black;
-    scrollbar-width: thin;*/
+body {
+  background-color: #d8a7d8;
+  color: black;
+  font-family: "Rubik", serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
 
-  }
+.calculator {
+  height: 400px;
+  max-width: 400px;
+  min-width: 400px;
+  background-color: black;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: -7px 10px 29px rgba(98, 94, 94, 0.412);
+}
 
-  .button-container {
-    height: 75%;
-    gap: 3%;
-    margin-top: 5%;
-  }
+.screen {
+  height: 20%;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: scroll;
+  scrollbar-color: rgb(112, 112, 112) black;
+  scrollbar-width: thin;
+  overflow-y: hidden;
+}
 
-  .button-row {
-    width: 20%;
-    height: 100%;
-    gap: 3%;
-  }
+.screen p {
+  width: 100%;
+  margin: 0;
+  text-align: end;
+}
 
-  button {
-    font-size: 25px;
-    color: white;
-    border: 0;
-    font-weight: 600;
-  }
+.equation-input {
+  color: lightgray;
+  font-size: 20px;
+  padding-bottom: 1.5%;
+  height: inherit;
+  white-space: nowrap;
+}
 
-  button:hover {
-    opacity: 0.75;
-  }
+.screen-input {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 3%;
+  white-space: nowrap;
+}
 
-  button:active {
-    opacity: 0.65;
-  }
+.button-container {
+  height: 75%;
+  gap: 3%;
+  margin-top: 5%;
+}
 
-  .number-buttons, .operation-buttons, .display-buttons {
-    border-radius: 50%;
-    height: 25%;
-  }
+.button-row {
+  width: 20%;
+  height: 100%;
+  gap: 3%;
+}
 
-  .number-buttons {
-    background-color: rgb(45, 44, 44);
-  }
+button {
+  font-size: 25px;
+  color: white;
+  border: 0;
+  font-weight: 600;
+}
 
-  .operation-buttons {
-    background-color: rgb(112, 112, 112);
-  }
+button:hover {
+  opacity: 0.75;
+}
 
-  .display-buttons {
-    background-color: lightgray;
-    color: rgb(45, 44, 44);
-  }
+button:active {
+  opacity: 0.65;
+}
 
-  .equals-button {
-    border-radius: 9px;
-    background-color: #d8a7d8;
-    height: 50%;
-  }
+.number-buttons,
+.operation-buttons,
+.display-buttons {
+  border-radius: 50%;
+  height: 25%;
+}
+
+.number-buttons {
+  background-color: rgb(45, 44, 44);
+}
+
+.operation-buttons {
+  background-color: rgb(112, 112, 112);
+}
+
+.display-buttons {
+  background-color: lightgray;
+  color: rgb(45, 44, 44);
+}
+
+.equals-button {
+  border-radius: 9px;
+  background-color: #d8a7d8;
+  height: 50%;
+}
